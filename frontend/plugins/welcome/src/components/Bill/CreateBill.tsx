@@ -237,16 +237,17 @@ const CreateBill: FC<{}> = () => {
                 <TableRow key={item.id}>
                     <TableCell align="center">{item.edges?.treatment?.id}</TableCell>
                     <TableCell align="center">{item.edges?.treatment?.edges?.patientrecord?.name}</TableCell>
-                    <TableCell align="center">{item.edges?.treatment?.edges?.typetreatment?.type}</TableCell>
+                    <TableCell align="center">{item.edges?.treatment?.edges?.typetreatment?.type}</TableCell> 
                     <TableCell align="center">
                         <Button
                          onClick={() => {
                             setunpayId(item.id as number)
                           }}
-                          style={{ marginLeft: 10 }}
                           variant="contained"
                           color="primary"
-                        />
+                        >
+                            ชำระเงิน
+                        </Button>
                     </TableCell>
                 </TableRow>
             ))}
